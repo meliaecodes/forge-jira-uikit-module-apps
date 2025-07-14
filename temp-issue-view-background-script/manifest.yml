@@ -1,0 +1,20 @@
+modules:
+  jira:issueViewBackgroundScript:
+    - key: temp-issue-view-background-script-issue-view-bg-script
+      resource: main-resource
+      render: native
+  jira:issuePanel:
+    - key: temp-issue-view-background-script-issue-view-bg-script-panel
+      title: temp-issue-view-background-script
+      viewportSize: medium
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+      resource: main-resource
+      render: native
+resources:
+  - key: main-resource
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

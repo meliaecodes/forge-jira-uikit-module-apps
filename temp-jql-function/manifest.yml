@@ -1,0 +1,21 @@
+modules:
+  jira:jqlFunction:
+    - key: temp-jql-function-issueswithtext-function
+      name: temp-jql-function
+      arguments:
+        - name: text
+          required: true
+      types:
+        - issue
+      operators:
+        - in
+        - not in
+      function: functionKey
+  function:
+    - key: functionKey
+      handler: index.issuesWithText
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

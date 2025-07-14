@@ -1,0 +1,25 @@
+modules:
+  jira:workflowCondition:
+    - key: temp-workflow-condition-issue-has-assignee-condition
+      expression: >
+        issue.assignee != null ? true : 'non boolean - this triggers
+        avi:jira:failed:expression'
+      name: temp-workflow-condition
+      description: Issue has to be assigned, otherwise a failed Jira expression event
+        will be triggered.
+  trigger:
+    - key: temp-workflow-condition-failed-expression-trigger
+      function: listen
+      events:
+        - avi:jira:failed:expression
+  function:
+    - key: listen
+      handler: index.listen
+permissions:
+  scopes:
+    - manage:jira-configuration
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

@@ -1,0 +1,14 @@
+modules:
+  jira:workflowValidator:
+    - key: temp-workflow-validator-example-workflow-validator
+      function: main
+      name: temp-workflow-validator
+      description: A Jira workflow validator example.
+  function:
+    - key: main
+      handler: index.run
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

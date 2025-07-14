@@ -1,0 +1,14 @@
+modules:
+  jira:command:
+    - key: temp-command-palette-modal-command-with-shortcut
+      title: temp-command-palette
+      shortcut: e t
+      target:
+        resource: main
+        render: native
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x

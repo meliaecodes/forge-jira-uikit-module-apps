@@ -2,4 +2,4 @@ This directory contains the default 'hello world' apps for all of the [Forge Jir
 
 Where the Module includes a UI, the UI Kit module has been supplied. 
 
-Note: The app id has been removed for all apps, so you will need to run forge register (after setting up your Forge development environment) to deploy and install any of the apps.  
+Note: The app id has been removed for all apps, so you will need to run 'forge register' (after [setting up your Forge development environment](https://developer.atlassian.com/platform/tool/forge-quest/forge-novice/preparing/)) to deploy and install any of the apps.  

@@ -1,0 +1,19 @@
+modules:
+  jira:issueAction:
+    - key: temp-issue-action-hello-world-issue-action
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-issue-action
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

@@ -1,0 +1,17 @@
+modules:
+  jira:boardAction:
+    - key: temp-board-action-hello-world-board-action
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-board-action
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x

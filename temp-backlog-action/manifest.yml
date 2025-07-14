@@ -1,0 +1,17 @@
+modules:
+  jira:backlogAction:
+    - key: temp-backlog-action-hello-world-backlog-action
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-backlog-action
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x

@@ -1,0 +1,11 @@
+modules:
+  jira:projectPermission:
+    - key: temp-project-permission-forge-project-permission
+      name: temp-project-permission
+      description: Forge custom project permission
+      category: issues
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

@@ -1,0 +1,30 @@
+modules:
+  jira:customField:
+    - key: temp-custom-field-custom-field-ui-kit-2-hello-world
+      name: temp-custom-field
+      description: A hello world custom field.
+      type: string
+      view:
+        render: native
+        resource: main
+        experience:
+          - issue-view
+      edit:
+        resource: edit
+        render: native
+        isInline: true
+        experience:
+          - issue-create
+          - issue-transition
+          - issue-view
+          - portal-request
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+  - key: edit
+    path: src/frontend/edit.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

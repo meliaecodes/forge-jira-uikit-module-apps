@@ -1,0 +1,19 @@
+modules:
+  jira:globalPage:
+    - key: temp-global-page-hello-world-global-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-global-page
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

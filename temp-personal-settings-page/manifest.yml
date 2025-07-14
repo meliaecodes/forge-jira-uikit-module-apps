@@ -1,0 +1,17 @@
+modules:
+  jira:personalSettingsPage:
+    - key: temp-personal-settings-page-hello-world-personal-settings-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-personal-settings-page
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x

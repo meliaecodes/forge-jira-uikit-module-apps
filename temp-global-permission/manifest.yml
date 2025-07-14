@@ -1,0 +1,13 @@
+modules:
+  jira:globalPermission:
+    - key: temp-global-permission-forge-global-permission
+      name: temp-global-permission
+      description: Forge custom global permission
+      anonymousAllowed: false
+      defaultGrants:
+        - all
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

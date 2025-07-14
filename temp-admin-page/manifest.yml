@@ -1,0 +1,19 @@
+modules:
+  jira:adminPage:
+    - key: temp-admin-page-hello-world-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-admin-page
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

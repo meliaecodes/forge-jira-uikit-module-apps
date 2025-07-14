@@ -1,0 +1,20 @@
+modules:
+  jira:dashboardBackgroundScript:
+    - key: temp-dashboard-background-script-dashboard-bg-script
+      resource: main-resource
+      render: native
+  jira:dashboardGadget:
+    - key: temp-dashboard-background-script-dashboard-bg-script-gadget
+      title: temp-dashboard-background-script
+      description: Gadget that talks with background script.
+      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      resource: main-resource
+      render: native
+resources:
+  - key: main-resource
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

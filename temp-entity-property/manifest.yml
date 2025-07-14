@@ -1,0 +1,20 @@
+modules:
+  jira:entityProperty:
+    - key: temp-entity-property-issue-stats-property
+      entityType: issue
+      propertyKey: stats
+      values:
+        - path: comments
+          type: number
+          searchAlias: commentCount
+        - path: statusTransitions
+          type: number
+          searchAlias: transitionCount
+        - path: lastCommenter
+          type: user
+          searchAlias: lastCommenter
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

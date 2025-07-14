@@ -1,0 +1,17 @@
+modules:
+  jira:sprintAction:
+    - key: temp-sprint-action-hello-world-sprint-action
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-sprint-action
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x

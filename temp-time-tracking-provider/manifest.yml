@@ -1,0 +1,9 @@
+modules:
+  jira:timeTrackingProvider:
+    - key: temp-time-tracking-provider-hello-world-time-tracking-provider
+      name: temp-time-tracking-provider
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64

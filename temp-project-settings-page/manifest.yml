@@ -1,0 +1,19 @@
+modules:
+  jira:projectSettingsPage:
+    - key: temp-project-settings-page-hello-world-project-settings-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: temp-project-settings-page
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
